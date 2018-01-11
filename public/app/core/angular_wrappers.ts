@@ -5,6 +5,7 @@ import EmptyListCTA from './components/EmptyListCTA/EmptyListCTA';
 import LoginBackground from './components/Login/LoginBackground';
 import { SearchResult } from './components/search/SearchResult';
 import UserPicker from './components/UserPicker/UserPicker';
+import Permissions from './components/Permissions/Permissions';
 
 export function registerAngularDirectives() {
   react2AngularDirective('passwordStrength', PasswordStrength, ['password']);
@@ -13,4 +14,12 @@ export function registerAngularDirectives() {
   react2AngularDirective('loginBackground', LoginBackground, []);
   react2AngularDirective('searchResult', SearchResult, []);
   react2AngularDirective('selectUserPicker', UserPicker, ['backendSrv', 'teamId', 'refreshList']);
+  react2AngularDirective('permissions', Permissions, [
+    'error',
+    'newType',
+    'aclTypes',
+    'typeChanged',
+    'backendSrv',
+    'dashboardId',
+  ]);
 }
